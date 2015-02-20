@@ -37,6 +37,8 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>Uber Client ID</key>
-	<string>0EHbt7_VV0_5mfYMoWNUfGYqROTeivsa</string>
+	<string>XXXX</string>
+	<key>Uber Server Token</key>
+	<string>XXXX</string>
 </dict>
 </plist>

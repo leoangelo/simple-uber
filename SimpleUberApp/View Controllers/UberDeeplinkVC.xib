@@ -16,6 +16,16 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drop-off Longitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ma3-cG-wCs">
+                    <rect key="frame" x="21" y="139" width="144" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="23" id="7ug-LO-jJW"/>
+                        <constraint firstAttribute="width" constant="144" id="GFA-gE-7tD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                    <color key="textColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drop-off Latitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dru-1c-cd1">
                     <rect key="frame" x="21" y="45" width="129" height="23"/>
                     <constraints>
@@ -26,6 +36,14 @@
                     <color key="textColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sf5-bU-Mqp" userLabel="Tap space">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="Tgr-dN-4nh" appends="YES" id="KBr-xj-eqc"/>
+                    </connections>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0RI-Bj-YgZ">
                     <rect key="frame" x="123" y="230" width="75" height="30"/>
                     <constraints>
@@ -45,7 +63,10 @@
                         <constraint firstAttribute="height" constant="30" id="pV3-ju-ZJc"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="8ks-FY-6be"/>
+                    </connections>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="-122.0605165" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eak-43-Eyr">
                     <rect key="frame" x="21" y="170" width="205" height="30"/>
@@ -53,35 +74,37 @@
                         <constraint firstAttribute="height" constant="30" id="HU8-N6-blg"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="GnV-ph-5ce"/>
+                    </connections>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drop-off Longitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ma3-cG-wCs">
-                    <rect key="frame" x="21" y="139" width="144" height="23"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="23" id="7ug-LO-jJW"/>
-                        <constraint firstAttribute="width" constant="144" id="GFA-gE-7tD"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                    <color key="textColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="ZC3-ze-K8b" firstAttribute="top" secondItem="dru-1c-cd1" secondAttribute="bottom" constant="8" id="2h3-5G-ARt"/>
                 <constraint firstAttribute="trailing" secondItem="eak-43-Eyr" secondAttribute="trailing" constant="94" id="4Yw-bI-wgw"/>
                 <constraint firstItem="eak-43-Eyr" firstAttribute="top" secondItem="ma3-cG-wCs" secondAttribute="bottom" constant="8" id="BWI-oJ-Cs9"/>
+                <constraint firstAttribute="trailing" secondItem="sf5-bU-Mqp" secondAttribute="trailing" id="Gch-vh-wAr"/>
+                <constraint firstItem="sf5-bU-Mqp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Gpg-zD-jpl"/>
                 <constraint firstItem="ZC3-ze-K8b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="21" id="KwZ-HZ-MfR"/>
                 <constraint firstItem="dru-1c-cd1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="21" id="TG9-Lm-Iso"/>
                 <constraint firstAttribute="centerX" secondItem="0RI-Bj-YgZ" secondAttribute="centerX" id="TNg-aF-hcL"/>
                 <constraint firstItem="0RI-Bj-YgZ" firstAttribute="top" secondItem="eak-43-Eyr" secondAttribute="bottom" constant="30" id="WvQ-hC-dFT"/>
+                <constraint firstItem="sf5-bU-Mqp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dhR-oS-tS5"/>
                 <constraint firstItem="ma3-cG-wCs" firstAttribute="top" secondItem="ZC3-ze-K8b" secondAttribute="bottom" constant="33" id="i1b-ek-Ih0"/>
                 <constraint firstAttribute="bottom" secondItem="0RI-Bj-YgZ" secondAttribute="bottom" constant="220" id="iLZ-64-LGx"/>
+                <constraint firstAttribute="bottom" secondItem="sf5-bU-Mqp" secondAttribute="bottom" id="ouB-BG-XwU"/>
                 <constraint firstItem="ma3-cG-wCs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="21" id="s9q-k0-PKd"/>
                 <constraint firstAttribute="trailing" secondItem="ZC3-ze-K8b" secondAttribute="trailing" constant="94" id="tKF-DJ-BLU"/>
                 <constraint firstItem="eak-43-Eyr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="21" id="vEm-17-9An"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
         </view>
+        <tapGestureRecognizer id="Tgr-dN-4nh">
+            <connections>
+                <action selector="tapSpaceTapped:" destination="-1" id="BSO-q3-zhX"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>

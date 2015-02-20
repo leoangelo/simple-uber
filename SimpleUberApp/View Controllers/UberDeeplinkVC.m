@@ -39,4 +39,10 @@
     [deeplinking openUber:[params mutableCopy]];
 }
 
+- (IBAction)tapSpaceTapped:(id)sender
+{
+    [self.latitude resignFirstResponder];
+    [self.longitude resignFirstResponder];
+}
+
 @end
