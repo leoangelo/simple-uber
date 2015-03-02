@@ -10,6 +10,7 @@
 
 @interface PriceEstimate : NSObject
 
+@property (nonatomic, strong) NSString *productId;
 @property (nonatomic, strong) NSString *displayName;
 @property (nonatomic, strong) NSString *estimate;
 @property (nonatomic, strong) NSNumber *duration; // in seconds

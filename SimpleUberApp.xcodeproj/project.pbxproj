@@ -10,6 +10,9 @@
 		23E3B71D09CD2A290362449F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76ADA13671A109BA53D0E2DC /* libPods.a */; };
 		B319550C1A96E349000716EE /* UberEndpoints.m in Sources */ = {isa = PBXBuildFile; fileRef = B319550B1A96E349000716EE /* UberEndpoints.m */; };
 		B31955131A970880000716EE /* PriceEstimate.m in Sources */ = {isa = PBXBuildFile; fileRef = B31955121A970880000716EE /* PriceEstimate.m */; };
+		B360D2E21AA478C000F6E05B /* TimeEstimate.m in Sources */ = {isa = PBXBuildFile; fileRef = B360D2E11AA478C000F6E05B /* TimeEstimate.m */; };
+		B360D2E61AA47AC700F6E05B /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B360D2E41AA47AC700F6E05B /* SummaryViewController.m */; };
+		B360D2E71AA47AC700F6E05B /* SummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B360D2E51AA47AC700F6E05B /* SummaryViewController.xib */; };
 		B3FA6D331A9611350028226E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FA6D321A9611350028226E /* main.m */; };
 		B3FA6D361A9611350028226E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FA6D351A9611350028226E /* AppDelegate.m */; };
 		B3FA6D3C1A9611350028226E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3FA6D3A1A9611350028226E /* Main.storyboard */; };
@@ -41,6 +44,11 @@
 		B319550B1A96E349000716EE /* UberEndpoints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UberEndpoints.m; sourceTree = "<group>"; };
 		B31955111A970880000716EE /* PriceEstimate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriceEstimate.h; sourceTree = "<group>"; };
 		B31955121A970880000716EE /* PriceEstimate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriceEstimate.m; sourceTree = "<group>"; };
+		B360D2E01AA478C000F6E05B /* TimeEstimate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeEstimate.h; sourceTree = "<group>"; };
+		B360D2E11AA478C000F6E05B /* TimeEstimate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeEstimate.m; sourceTree = "<group>"; };
+		B360D2E31AA47AC700F6E05B /* SummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SummaryViewController.h; sourceTree = "<group>"; };
+		B360D2E41AA47AC700F6E05B /* SummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SummaryViewController.m; sourceTree = "<group>"; };
+		B360D2E51AA47AC700F6E05B /* SummaryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SummaryViewController.xib; sourceTree = "<group>"; };
 		B3FA6D2D1A9611350028226E /* SimpleUberApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleUberApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3FA6D311A9611350028226E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3FA6D321A9611350028226E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -174,6 +182,9 @@
 				B3FA6D641A9613350028226E /* UberDeeplinkVC.h */,
 				B3FA6D651A9613350028226E /* UberDeeplinkVC.m */,
 				B3FA6D661A9613350028226E /* UberDeeplinkVC.xib */,
+				B360D2E31AA47AC700F6E05B /* SummaryViewController.h */,
+				B360D2E41AA47AC700F6E05B /* SummaryViewController.m */,
+				B360D2E51AA47AC700F6E05B /* SummaryViewController.xib */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -191,6 +202,8 @@
 				B319550B1A96E349000716EE /* UberEndpoints.m */,
 				B31955111A970880000716EE /* PriceEstimate.h */,
 				B31955121A970880000716EE /* PriceEstimate.m */,
+				B360D2E01AA478C000F6E05B /* TimeEstimate.h */,
+				B360D2E11AA478C000F6E05B /* TimeEstimate.m */,
 			);
 			path = "simple-uber";
 			sourceTree = SOURCE_ROOT;
@@ -280,6 +293,7 @@
 				B3FA6D681A9613350028226E /* PriceEstimatesVC.xib in Resources */,
 				B3FA6D3C1A9611350028226E /* Main.storyboard in Resources */,
 				B3FA6D411A9611350028226E /* LaunchScreen.xib in Resources */,
+				B360D2E71AA47AC700F6E05B /* SummaryViewController.xib in Resources */,
 				B3FA6D3E1A9611350028226E /* Images.xcassets in Resources */,
 				B3FA6D6A1A9613350028226E /* UberDeeplinkVC.xib in Resources */,
 			);
@@ -334,10 +348,12 @@
 			files = (
 				B3FA6D741A96151F0028226E /* UberDeeplinking.m in Sources */,
 				B3FA6D671A9613350028226E /* PriceEstimatesVC.m in Sources */,
+				B360D2E21AA478C000F6E05B /* TimeEstimate.m in Sources */,
 				B3FA6D771A961AE80028226E /* NSDictionary+URLParameters.m in Sources */,
 				B3FA6D691A9613350028226E /* UberDeeplinkVC.m in Sources */,
 				B319550C1A96E349000716EE /* UberEndpoints.m in Sources */,
 				B3FA6D361A9611350028226E /* AppDelegate.m in Sources */,
+				B360D2E61AA47AC700F6E05B /* SummaryViewController.m in Sources */,
 				B3FA6D331A9611350028226E /* main.m in Sources */,
 				B31955131A970880000716EE /* PriceEstimate.m in Sources */,
 				B3FA6D7A1A961E000028226E /* NSMutableDictionary+ExtraMethods.m in Sources */,

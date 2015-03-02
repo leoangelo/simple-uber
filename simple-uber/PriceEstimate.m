@@ -13,6 +13,7 @@
 + (PriceEstimate *)parseFromDictionary:(NSDictionary *)dictionary
 {
     PriceEstimate *anEstimate = [PriceEstimate new];
+    anEstimate.productId = dictionary[@"product_id"];
     anEstimate.displayName = dictionary[@"display_name"];
     anEstimate.estimate = dictionary[@"estimate"];
     anEstimate.duration = dictionary[@"duration"];
